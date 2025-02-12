@@ -1,0 +1,35 @@
+<h2 mat-dialog-title style="text-align: center; font-weight: bold;">Adicionar Usuário</h2>
+
+<mat-dialog-content>
+  <form #userForm="ngForm"  novalidate>
+
+    <mat-form-field appearance="fill" style="width: 100%; margin-bottom: 15px;">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="nome" name="nome" #nomeInput="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Digite Seu nome" style="border-radius: 0;" required>
+      <mat-error *ngIf="nomeInput.invalid && nomeInput.touched">O nome é obrigatório.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%; margin-bottom: 15px;">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="email" #emailInput="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Digite Seu Email" style="border-radius: 0;" required email>
+      <mat-error *ngIf="emailInput.invalid && emailInput.touched">O e-mail é obrigatório e deve ser válido.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%; margin-bottom: 15px;">
+      <mat-label>Matrícula</mat-label>
+      <input matInput [(ngModel)]="matricula" name="matricula" #matriculaInput="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Digite Sua Matrícula" style="border-radius: 0;" required>
+      <mat-error *ngIf="matriculaInput.invalid && matriculaInput.touched">A matrícula é obrigatória.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%; margin-bottom: 15px;">
+      <mat-label>Senha</mat-label>
+      <input matInput [(ngModel)]="senha" name="senha" #senhaInput="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Digite Sua Senha" type="password" style="border-radius: 0;" required>
+      <mat-error *ngIf="senhaInput.invalid && senhaInput.touched">A senha é obrigatória.</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancelar</button>
+  <button mat-button (click)="savePassword()" type="submit">Salvar</button>
+</mat-dialog-actions>

@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+
+
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+
+
+    <div class="card-header">
+      <img src="assets/wenLock_logo.svg" alt="Logo" class="card-logo" />
+    </div>
+
+    <mat-nav-list>
+      <a mat-list-item (click)="selectComponent('home')">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a mat-list-item (click)="selectComponent('user')">
+        <mat-icon>person</mat-icon>
+        <span>Usuários</span>
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <ng-container [ngSwitch]="currentComponent">
+        <app-home-component *ngSwitchCase="'home'"></app-home-component>
+        <app-user-component *ngSwitchCase="'user'"></app-user-component>
+        
+
+      </ng-container>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

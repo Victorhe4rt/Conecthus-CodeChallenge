@@ -1,0 +1,109 @@
+.sidenav-container {
+    height: 200vh;
+    width: 100%;
+ 
+  }
+
+  .sidenav {
+    color: white ;
+    width: 250px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+    background-color: #0D1931; /* Fundo branco */
+    border-radius: 0; /* Remove o border-radius do container */
+    
+  }
+  .sidenav a{
+    margin: auto;
+    border-radius: 8px;
+    width: 95%;
+    margin-top: 1%; 
+  }
+
+  .sidenav .card-logo{
+
+    margin: 20px;
+    height: 40px;
+  }
+  .sidenav a:hover{
+    background-color: #00AAC1;
+    transition: background-color 0.3s ease;
+  }
+
+  .sidenav a:active{
+    background-color: #00AAC1;
+  }
+
+
+  .sidenav  .mat-icon {
+    color: white ;
+  }
+  .sidenav span {
+    color: white;
+    margin-left: 8px;
+    
+  }
+
+
+  
+  mat-toolbar {
+    background-color: #ffffff;
+  }
+  
+  mat-nav-list a {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-icon {
+    margin-right: 16px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px; 
+  }
+
+  .app-title {
+    font-family: 'Roboto', sans-serif; /* Usa a fonte padrão do Angular Material */
+    font-size: 24px; /* Tamanho maior para destaque */
+    font-weight: 500; /* Peso moderado para o texto */
+    color: black; /* Cor cinza mais fosca */
+    margin-left: 16px; /* Espaçamento entre o botão e o título */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+  }
+  
+
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    cursor: pointer; /* Mostra que é interativo */
+  }
+
+.mat-icon {
+    font-size: 28px; 
+  }
+  
+  /* Estilo para a imagem do logo */
+.card-logo {
+    width: 200px; /* Tamanho igual ao tamanho de um ícone do Angular Material */
+    height: 300px; /* Mantém a proporção correta */
+    object-fit: contain; /* Garante que a imagem se ajuste bem */
+    margin-right: 8px; /* Espaçamento entre a imagem e o texto */
+  }
+  
+  /* Estilo para o card-header */
+  .card-header {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+  }
+  
