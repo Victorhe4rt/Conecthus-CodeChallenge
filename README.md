@@ -29,10 +29,15 @@
     ```
 
 4. Caso o banco de dados tenha sido iniciado corretamente, você verá a linha referente ao seu container na lista de containers em execução.
+   ![image](https://github.com/user-attachments/assets/c7a1ff55-664d-4ae9-a8f6-de307d3b9c25)
+
 
 ---
 
 ## 2. Subir o Backend
+
+BACK - END (SCREENSHOT)
+![image](https://github.com/user-attachments/assets/892ca0f1-79d4-4145-a25e-02db3ae5fee9)
 
 ### Requisitos
 - Node.js versão 22 ou superior.
@@ -65,9 +70,24 @@
 
 5. Caso precise alterar alguma variável de ambiente, o host da API pode ser ajustado diretamente no arquivo `main.ts`. A **connection string** do banco de dados pode ser configurada no arquivo `app.module.ts`.
 
+
+
+
 ---
 
 ## 3. Subir o Frontend
+
+HOME(Screenshot)
+![image](https://github.com/user-attachments/assets/ba2c865e-a218-4933-8a19-bffde83d83d9)
+
+USER(Screenshot)
+![image](https://github.com/user-attachments/assets/e4f8e5d9-1d8b-4d58-b37e-305c8b5b33eb)
+
+CREATE User (Screenshot)
+![image](https://github.com/user-attachments/assets/f44f8d2f-6387-4638-9e0b-061b11a818ad)
+
+
+
 
 ### Requisitos
 - Node.js versão 22 ou superior.
