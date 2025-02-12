@@ -1,39 +1,96 @@
-Dependências: Docker
+# Como Rodar o Projeto
 
-Subir o banco de dados:
+## Dependências
 
-Com o Docker instalado no diretório database do projeto, rode o comando:
-docker-compose up -d
-Por padrão, a porta utilizada será a 5432.
-Caso tenha alguma dúvida, execute o comando docker ps. Esta linha deverá ser mostrada.
-Subir o back-end:
+- Docker
+- Node.js (versão 22 ou superior)
+- Angular CLI (para o frontend)
 
-Dependências: Node 22
+---
 
-Primeiro, rode o comando para instalar as dependências do projeto:
+## 1. Subir o Banco de Dados
 
-npm install
-Segundo, rode o comando para instalar o TypeORM:
+### Requisitos
+- Docker instalado no seu sistema.
 
-npm install @nestjs/typeorm typeorm pg
-Terceiro, rode o comando para subir as tabelas do banco já com dados:
+### Passos:
 
-npm run create-db
-Quarto, rode o comando para subir o back-end. A porta 3000 será usada para subir a API:
+1. Navegue até o diretório `database` do projeto.
+2. Execute o comando abaixo para subir o banco de dados utilizando o Docker Compose:
 
-nest start
-Caso precise alterar alguma variável de ambiente, o host da API pode ser ajustado no arquivo main.ts, e a connection string se encontra no app.module.
+    ```bash
+    docker-compose up -d
+    ```
 
-Subir o front-end:
+3. Por padrão, a porta utilizada será a **5432**. Caso queira verificar se o container foi iniciado corretamente, execute:
 
-Dependências: Node 22
+    ```bash
+    docker ps
+    ```
 
-Para subir a aplicação, precisamos instalar os pacotes com o comando:
+4. Caso o banco de dados tenha sido iniciado corretamente, você verá a linha referente ao seu container na lista de containers em execução.
 
-npm install
-Após isso, rode o comando:
+---
 
-ng serve
-Caso precise alterar alguma variável de ambiente, a porta do front-end pode ser alterada no arquivo launch.json.
+## 2. Subir o Backend
 
-A URL da API do back-end se encontra dentro de src/component/environment/.env. Lá pode ser feita a alteração da URL.
+### Requisitos
+- Node.js versão 22 ou superior.
+
+### Passos:
+
+1. No diretório do backend, instale as dependências do projeto:
+
+    ```bash
+    npm install
+    ```
+
+2. Em seguida, instale o TypeORM e o PostgreSQL:
+
+    ```bash
+    npm install @nestjs/typeorm typeorm pg
+    ```
+
+3. Para criar as tabelas no banco de dados e popular com dados iniciais, execute:
+
+    ```bash
+    npm run create-db
+    ```
+
+4. Agora, para iniciar o backend e subir a API, execute o seguinte comando. A aplicação será iniciada na porta **3000**:
+
+    ```bash
+    nest start
+    ```
+
+5. Caso precise alterar alguma variável de ambiente, o host da API pode ser ajustado diretamente no arquivo `main.ts`. A **connection string** do banco de dados pode ser configurada no arquivo `app.module.ts`.
+
+---
+
+## 3. Subir o Frontend
+
+### Requisitos
+- Node.js versão 22 ou superior.
+- Angular CLI (se não tiver, instale com `npm install -g @angular/cli`).
+
+### Passos:
+
+1. No diretório do frontend, instale as dependências do projeto:
+
+    ```bash
+    npm install
+    ```
+
+2. Após isso, execute o comando abaixo para subir a aplicação Angular:
+
+    ```bash
+    ng serve
+    ```
+
+3. Caso precise alterar alguma variável de ambiente, você pode configurar a porta do frontend no arquivo `launch.json`.
+
+4. Para configurar a URL da API do backend, edite o arquivo `src/app/environment/.env`. Lá você pode modificar a URL conforme necessário.
+
+---
+
+Com essas etapas, o projeto estará rodando corretamente tanto para o backend quanto para o frontend.
